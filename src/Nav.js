@@ -41,12 +41,13 @@ class Nav extends Component {
     render() {
         //Style properties for each link within the navbar
         const navTextStyle = {
-            paddingRight: '15px',
-            paddingLeft: '15px',
+            marginLeft:'1.75%',
+            marginRight:'1.75%',
             fontWeight: '600',
             color: 'black',
             textDecoration: 'none',
-            fontSize: '22px'
+            fontSize: '22px',
+            fontFamily: 'Arvo'
         }
         //Style for the navbar itself
         const navStyle = {
@@ -57,9 +58,7 @@ class Nav extends Component {
             backgroundImage: "url(" + this.state.image + ")",
             backgroundColor: this.state.color,
             boxShadow: '3px 3px 5px gray',
-            zIndex: '1',
-            margin: '0rem',
-            padding: '0'
+
         }
         //Map each link from the api into the navbar
         let navItems = this.state.data.map((item, index) => {

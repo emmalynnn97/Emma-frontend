@@ -23,16 +23,12 @@ class FrontEndPortfolio extends Component {
         }
         const topColStyle={
             height:'62vh',
-            marginTop:'7%',
-            padding:'0 !important',
             boxShadow:'2px 2px 5px black',
             backgroundPosition:'center',
             backgroundSize:'cover',
         }
         const colStyle={
             height:'62vh',
-            marginTop:'0%',
-            padding:'0 !important',
             boxShadow:'2px 2px 5px black',
             backgroundPosition:'center',
             backgroundSize:'cover',
@@ -44,21 +40,30 @@ class FrontEndPortfolio extends Component {
         return (
             
             <div style={containerStyle} className='container'>
-                
                 <div className='row'>
-                    <Tile sm='12' md='4' lg='3' style={topColStyle} endpoint={endPoints.e1}/>
-                    <Tile sm='12' md='4' lg='6' style={topColStyle} endpoint={endPoints.e2}/>
-                    <Tile sm='12' md='4' lg='3' style={topColStyle} endpoint={endPoints.e3}/>
+                <Tile sm='12' md='12' lg='12' style={topColStyle} endpoint={endPoints.e3}/>
                 </div>
                 <div className='row'>
-                    <Tile sm='12' md='4' lg='3' style={colStyle} endpoint={endPoints.e4}/>
-                    <Tile sm='12' md='4' lg='6' style={colStyle} endpoint={endPoints.e5}/>
-                    <Tile sm='12' md='4' lg='3' style={colStyle} endpoint={endPoints.e6}/>
+                    <Tile sm='12' md='12' lg='6' style={topColStyle} endpoint={endPoints.e1}/>
+                    <Tile sm='12' md='12' lg='6' style={topColStyle} endpoint={endPoints.e2}/>
+                    
                 </div>
                 <div className='row'>
-                    <Tile sm='12' md='4' lg='3' style={colStyle} endpoint={endPoints.e7}/>
-                    <Tile sm='12' md='4' lg='6' style={colStyle} endpoint={endPoints.e8}/>
-                    <Tile sm='12' md='4' lg='3' style={colStyle} endpoint={endPoints.e9}/>
+                    {/*>*/}
+                    <Tile sm='12' md='12' lg='8' style={colStyle} endpoint={endPoints.e4}/>
+                    <Tile sm='12' md='12' lg='4' style={colStyle} endpoint={endPoints.e6}/>
+                </div>
+                <div className='row'>
+                <Tile sm='12' md='12' lg='12' style={colStyle} endpoint={endPoints.e5}/>
+                    
+                </div>
+                <div className='row'>
+                    <Tile sm='12' md='12' lg='6' style={colStyle} endpoint={endPoints.e7}/>
+                   
+                    <Tile sm='12' md='12' lg='6' style={colStyle} endpoint={endPoints.e9}/>
+                </div>
+                <div className='row'>
+                <Tile sm='12' md='12' lg='12' style={colStyle} endpoint={endPoints.e8}/>
                 </div>
             </div>
         )

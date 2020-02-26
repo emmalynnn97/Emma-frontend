@@ -34,12 +34,11 @@ class Tile extends Component {
             width: '100%',
             opacity: this.state.opacity,
             transition: '.5s ease',
-            backgroundColor: 'black',
-            backgroundImage: 'url("https://www.transparenttextures.com/patterns/asfalt-light.png")'
+            backgroundColor: 'white',
+            backgroundImage: 'url("https://www.transparenttextures.com/patterns/asfalt-dark.png")'
         }
         const textStyle = {
-            backgroundColor: 'black',
-            color: 'white',
+            color: 'black',
             fontSize: '24px',
             position: 'absolute',
             top: '50%',
@@ -48,16 +47,17 @@ class Tile extends Component {
             textAlign: 'center'
         }
         const btnStyle={
-            border:'2px solid white',
-            color:'white',
-            backgroundColor:'black',
-            fontFamily:'verdana',
-            padding:'5px 10px',
+            color:'black',
+            backgroundColor:'white',
+            border:'2px solid black',
+            fontFamily:'Arvo',
+            padding:'5px 35px',
             textDecoration:'none',
             margin:'0 2.5px',
-            fontSize:'18px',
+            fontSize:'22px',
             fontWeight:'700',
-            transition:'.35s linear'
+            transition:'.35s linear',
+            letterSpacing:'1.5px'
         }
         const bgImage = {
             backgroundImage:`url("${this.state.bgImage}")`
@@ -78,7 +78,6 @@ class Tile extends Component {
                         <h2>{this.state.content.title}</h2>
                         <p>{this.state.content.description}</p>
                         <a  style={btnStyle} href={this.state.content.link}>View</a>
-                        <a  style={btnStyle} href='portfolio'>Case Study</a>
                     </div>
                 </div>
             </div>

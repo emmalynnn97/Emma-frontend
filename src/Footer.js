@@ -20,21 +20,23 @@ class Footer extends Component {
             backgroundColor:this.state.color,
             backgroundImage:`url(${this.state.image})`,
             height: '15vh',
-            boxShadow: '3px 3px 5px gray',
             borderRadius: '2px',
             display:'flex',
             alignItems:'center',
             flexWrap:'wrap',
             justifyContent:'center',
             flexDirection:'row',
-            paddingTop:'.5%'
+            bottom:'0',
+            right:'0',
+            left:'0'
         }
         //Style properties for the footer text
         const headerStyle = {
             color: 'black',
             display:'flex',
             fontWeight:'700',
-            letterSpacing:'1.25px'
+            letterSpacing:'1.25px',
+            fontFamily: 'Arvo'
         }
         //Style properties for the footer icons
         const iconStyle = {

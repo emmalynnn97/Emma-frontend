@@ -26,6 +26,7 @@ class BackToTopButton extends Component {
             alignItems:'center',
             justifyContent:'center',
             transition:'.35s ease-in',
+            display:'none',
             cursor:this.state.cursor
         }
         const iconStyle={

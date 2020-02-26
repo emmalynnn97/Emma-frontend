@@ -11,6 +11,7 @@ function App() {
 
   let landingPage=()=>(
     <>
+  
   <LandingPageTemplate endpoint={landingEndPoint}/>
   </>
   )
