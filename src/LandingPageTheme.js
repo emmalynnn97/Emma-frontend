@@ -8,7 +8,8 @@ export default class LandingPageTheme{
             display: 'table',
             textAlign: 'center',
             backgroundPosition: 'center',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            fontFamily: 'Arvo'
         }
         this.pic1 = {
             backgroundImage: 'url("https://wpreact.emmalynnn.com/wp-content/uploads/2020/01/20191215_131418-scaled.jpg")',
@@ -26,11 +27,11 @@ export default class LandingPageTheme{
             textAlign: 'center',
             backgroundImage: 'url("https://wpreact.emmalynnn.com/wp-content/uploads/2020/02/plant-2004483_1920.jpg")',
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+            fontFamily: 'Arvo'
         }
         this.containerStyle = {
-            height: '300vh',
-            maxWidth: '95vw',
+            maxWidth: '95vw'
         }
         this.vAlign = {
             display: 'table-cell',

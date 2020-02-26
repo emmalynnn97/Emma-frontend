@@ -18,13 +18,13 @@ class Button extends Component {
             border:`2px solid ${this.state.primaryColor}`,
             color:this.state.primaryColor,
             backgroundColor:this.state.secondaryColor,
-            fontFamily:'verdana',
             padding:'10px 15px',
             textDecoration:'none',
             margin:'0 0',
             fontSize:'20px',
             fontWeight:'700',
-            transition:'.35s linear'
+            transition:'.35s linear',
+            fontFamily: 'Arvo'
         }
         return (
             //Invert colors on mouse enter
