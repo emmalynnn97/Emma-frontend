@@ -112,6 +112,7 @@ export class HomePage extends Component {
                   backgroundPosition:'center',
                   backgroundSize:'cover',
                   borderTop:'1px solid white',
+                  padding:'10px 30px'
               }}>
                   <h2>Heading</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
