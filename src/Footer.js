@@ -28,11 +28,12 @@ class Footer extends Component {
             flexDirection:'row',
             bottom:'0',
             right:'0',
-            left:'0'
+            left:'0',
+            width:'100vw'
         }
         //Style properties for the footer text
         const headerStyle = {
-            color: 'black',
+            color: 'white',
             display:'flex',
             fontWeight:'700',
             letterSpacing:'1.25px',
@@ -42,7 +43,7 @@ class Footer extends Component {
         const iconStyle = {
             height: '50px',
             width: '50px',
-            color: 'black',
+            color: 'white',
             display:'flex',
             marginLeft:'25px',
         }
