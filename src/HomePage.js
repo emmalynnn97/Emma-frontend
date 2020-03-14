@@ -59,8 +59,9 @@ export class HomePage extends Component {
                 alignItems:'center',
                 flexDirection:'column',
                 color:'white',
+                flexWrap:'wrap'
               }} className='row'>
-                  <h1>Hi! I am a simple home page!</h1>
+                  <h1>Header</h1>
               </div>
               <div style={{
                 margin:'-10vh 0vw 0 0vw',
