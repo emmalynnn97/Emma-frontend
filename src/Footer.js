@@ -26,8 +26,6 @@ class Footer extends Component {
             flexWrap:'wrap',
             justifyContent:'center',
             flexDirection:'row',
-            bottom:'0',
-            right:'0',
             left:'0',
             width:'100vw'
         }
