@@ -1,3 +1,14 @@
-
+@media (max-width:768px){
+    .projectCol{
+        padding:0 !important;
+        margin-bottom:1vh;
+    }
+}
+@media (max-width:480px){
+    .projectCol{
+        padding:0 !important;
+        margin-bottom:20vh;
+    }
+}
 
 
