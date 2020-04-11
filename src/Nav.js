@@ -5,43 +5,9 @@ class Nav extends Component {
         super(props)
 
         this.state = {
-            data: [],
             endpoint: this.props.endpoint,
             image: this.props.image,
             color: this.props.color,
-        }
-    }
-    //Load in the menu items from my API
-    componentDidMount() {
-        window.addEventListener("scroll", (this.shrinkNavOnScroll));
-        fetch(this.state.endpoint)
-            .then(res => res.json())
-            .then((data) => {
-                this.setState({ data: data })
-            })
-            .catch(console.log)
-        const headerEl = document.getElementById("js-header");
-        headerEl.style.opacity = .4
-    }
-    //Remove the scroll event listener when component unmounts
-    componentWillUnmount() {
-        window.removeEventListener("scroll", (this.shrinkNavOnScroll));
-
-    }
-    //Check how far down the user has scrolled, when 50px is passed change the navbar
-    shrinkNavOnScroll() {
-        const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 50,
-            headerEl = document.getElementById("js-header"),
-            opacityInit = .5,
-            heightInit = 100;
-        headerEl.style.transition = '.5s'
-        if (distanceY > shrinkOn) {
-            headerEl.style.opacity = opacityInit + distanceY / 2000
-            headerEl.style.height = (Math.ceil((heightInit - (distanceY / 100)))) + 'px'
-        } else {
-            headerEl.style.opacity = opacityInit
-            headerEl.style.height = heightInit + 'px'
         }
     }
     getStyles() {
@@ -49,8 +15,8 @@ class Nav extends Component {
             navTextStyle: {
                 marginLeft: '1.75%',
                 marginRight: '1.75%',
-                fontWeight: '600',
-                color: 'black',
+                fontWeight: '500',
+                color: 'white',
                 textDecoration: 'none',
                 fontSize: '22px',
                 fontFamily: 'Arvo'
@@ -58,9 +24,8 @@ class Nav extends Component {
             navStyle: {
                 height: '100px',
                 position: 'fixed',
-                width: '100vw',
+                width:'100vw',
                 top: '0',
-                backgroundImage: "url(" + this.state.image + ")",
                 backgroundColor: this.state.color,
                 boxShadow: '3px 3px 5px gray'
             }
@@ -70,15 +35,11 @@ class Nav extends Component {
         const styles = this.getStyles();
         const navTextStyle = styles.navTextStyle;
         const navStyle = styles.navStyle;
-        //Map each link from the api into the navbar
-        let navItems = this.state.data.map((item, index) => {
-            return (
-                <Link style={navTextStyle} to={item.link}>{item.name}</Link>
-            )
-        })
         return (
-            <nav style={navStyle} id='js-header' className='navbar row justify-content-center sticky-top navbar-expand navbar-dark'>
-                {navItems}
+            <nav style={navStyle} id='js-header' className='navbar justify-content-center sticky-top navbar-expand navbar-dark'>
+                <Link style={navTextStyle} to={"/"}>Home</Link>
+                <Link style={navTextStyle} to={"/about"}>About</Link>
+                <Link style={navTextStyle} to={"/portfolio"}>Portfolio</Link>
             </nav>
         )
     }

@@ -27,7 +27,7 @@ function App() {
     </>
   )
   let homePage=()=>(
-    <HomePage grayscale='50%'/>
+    <HomePage/>
   )
   const appStyle={
     height:'100vh',
@@ -35,7 +35,7 @@ function App() {
   return (
     <Router>
     <div style={appStyle} className="App">
-    {/*<Nav color='white' image='https://www.transparenttextures.com/patterns/asfalt-dark.png' endpoint={menuEndpoint}/>*/}
+    <Nav color='' image='https://www.transparenttextures.com/patterns/asfalt-dark.png' endpoint={menuEndpoint}/>
       <Route exact path='/' component={homePage}></Route>
       {/*<Route path='/contact' component={contactPage}></Route>*/}
       {/*<Route path='/home' component={homePage}></Route>*/}
